@@ -1,15 +1,15 @@
 import {Image, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {DummyHospital1} from '../../../assets';
 import {colors, fonts} from '../../../utils';
 
-export default function ListHospital() {
+export default function ListHospital({type, name, address, pic}) {
   return (
     <View style={styles.content}>
-      <Image source={DummyHospital1} style={styles.image} />
+      <Image source={pic} style={styles.image} />
       <View>
-        <Text style={styles.title}>Rumah Sakit Citra Bunga Merdeka</Text>
-        <Text style={styles.desc}>Jln. Surya Sejahtera 20</Text>
+        <Text style={styles.title}>{type}</Text>
+        <Text style={styles.title}>{name}</Text>
+        <Text style={styles.desc}>{address}</Text>
       </View>
     </View>
   );
@@ -32,7 +32,6 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: fonts.primary[400],
     color: colors.secondary,
-    maxWidth: 151,
   },
   desc: {
     fontSize: 12,
