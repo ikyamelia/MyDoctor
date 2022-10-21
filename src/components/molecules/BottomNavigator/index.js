@@ -25,8 +25,7 @@ export default function BottomNavigator({navigation, state, descriptors}) {
           });
 
           if (!isFocused && !event.defaultPrevented) {
-            // The `merge: true` option makes sure that the params inside the tab screen are preserved
-            navigation.navigate({name: route.name, merge: true});
+            navigation.navigate(route.name);
           }
         };
 
@@ -45,16 +44,6 @@ export default function BottomNavigator({navigation, state, descriptors}) {
             onPress={onPress}
             onLongPress={onLongPress}
           />
-          // <TouchableOpacity
-          //   accessibilityRole="button"
-          //   accessibilityState={isFocused ? {selected: true} : {}}
-          //   accessibilityLabel={options.tabBarAccessibilityLabel}
-          //   testID={options.tabBarTestID}
-          //   onPress={onPress}
-          //   onLongPress={onLongPress}
-          //   style={{flex: 1}}>
-          //   <Text style={{color: isFocused ? '#673ab7' : '#222'}}>{label}</Text>
-          // </TouchableOpacity>
         );
       })}
     </View>
