@@ -1,4 +1,4 @@
-import IconBackDark from './ic-back-dark.svg';
+import ArrowBack from './ic-back-dark.svg';
 import IconBackLight from './ic-back-light.svg';
 import IconAddPhoto from './ic-add-photo.svg';
 import IconRemovePhoto from './ic-remove-photo.svg';
@@ -20,7 +20,7 @@ import IconMale from './ic-male.svg';
 import IconFemale from './ic-female.svg';
 
 export {
-  IconBackDark,
+  ArrowBack,
   IconBackLight,
   IconAddPhoto,
   IconRemovePhoto,
